@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
   .red-text {
@@ -24,23 +31,21 @@
   .smaller-image {
     width: 100px;
   }
-
-  .silver-background {
-    background-color: silver;
-  }
-  
-  #cat-photo-form {
-    background-color: green;
-  }
 </style>
+</head>
+<body>
 
-<h2 class="red-text">CatPhotoApp</h2>
+<div class="container-fluid">
+  <h2 class="red-text text-center">CatPhotoApp</h2>
 
-<p>Click here for <a href="#">cat photos</a>.</p>
+  <p>Click here for <a href="#">cat photos</a>.</p>
 
-<a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back. " src="https://bit.ly/fcc-relaxing-cat"></a>
+  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
 
-<div class="silver-background">
+  <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera. ">
+  <button class="btn btn-block btn-primary">Like</button>
+  <button class="btn btn-block btn-info">Info</button>
+  <button class="btn btn-block btn-danger">Delete</button>
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -53,14 +58,16 @@
     <li>thunder</li>
     <li>other cats</li>
   </ol>
+  <form action="/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+    <label><input type="checkbox" name="personality"> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Crazy</label>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
 </div>
 
-<form action="/submit-cat-photo" id="cat-photo-form">
-  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality" checked> Loving</label>
-  <label><input type="checkbox" name="personality"> Lazy</label>
-  <label><input type="checkbox" name="personality"> Energetic</label>
-  <input type="text" placeholder="cat photo URL" required>
-  <button type="submit">Submit</button>
-</form>
+</body>
+</html>
